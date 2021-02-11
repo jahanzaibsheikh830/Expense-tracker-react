@@ -14,7 +14,7 @@ export default function History() {
                         {
                             transaction.map((element, index) => {
                                 return (
-                                    <li className="history" key={index} id={index}>
+                                    <li className="history" key={index}>
                                         <span>{element.des}</span>
                                         <span >{element.amount} <span className="del" onClick={()=>{
                                             delItem(element.id)
