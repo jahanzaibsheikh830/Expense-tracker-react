@@ -2,17 +2,18 @@ import React, { useState ,useContext} from 'react'
 import "../App.css";
 import { TransactionContext } from "./UseContext";
 export default function Transaction(){
-    let { transaction, addTransaction } = useContext(TransactionContext)
+    let {addTransaction } = useContext(TransactionContext)
 
     let [text ,setText] = useState('')
     let [amount ,setAmount] = useState(0)
 
     function addHandler(event) {
         event.preventDefault()
-
+        console.log(text,amount)
         addTransaction({
-            amount: amount,
-            des: text
+            amount: Number(amount) ,
+            des: text,
+            id: Math.floor(Math.random()* 1000000000)
         })
     }
     return(

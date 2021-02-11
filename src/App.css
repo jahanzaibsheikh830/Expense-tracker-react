@@ -35,3 +35,12 @@
   margin-top: 5px;
   cursor: pointer;
 }
+.del{
+  color: #fff;
+  padding: 8px;
+  /* position: absolute;
+  left: 61%; */
+  /* margin-right: -40px; */
+  background-color: red;
+  cursor: pointer;
+}

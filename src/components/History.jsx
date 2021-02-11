@@ -3,7 +3,8 @@ import "../App.css";
 import { TransactionContext } from "./UseContext";
 
 export default function History() {
-    let { transaction, addTransaction} = useContext(TransactionContext)
+    let { transaction , delItem} = useContext(TransactionContext)
+    // console.log(transaction)
     return (
         <div>
             <div className="container">
@@ -13,9 +14,11 @@ export default function History() {
                         {
                             transaction.map((element, index) => {
                                 return (
-                                    <li className="history" key={index}>
+                                    <li className="history" key={index} id={index}>
                                         <span>{element.des}</span>
-                                        <span >{element.amount}</span>
+                                        <span >{element.amount} <span className="del" onClick={()=>{
+                                            delItem(element.id)
+                                        }}>X</span> </span>
                                     </li>
                                 )
                             })
