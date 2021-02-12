@@ -28,8 +28,8 @@ function Income(){
         <div>
             <div className="container">
                 <div className="income">
-                    <p>Income <br/>{getIncome()}</p>
-                    <p>Expense <br/>{getExpense()}</p>
+                    <p>Income <br/>${getIncome()}</p>
+                    <p>Expense <br/>${getExpense()}</p>
                 </div>
             </div>
         </div>

@@ -13,8 +13,9 @@ export default function Transaction(){
         addTransaction({
             amount: Number(amount) ,
             des: text,
-            id: Math.floor(Math.random()* 1000000000)
         })
+        setText('')
+        setAmount('')
     }
     return(
         <div>
@@ -22,10 +23,10 @@ export default function Transaction(){
                 <div className="form"><br/>
                     <h3>Add new transaction</h3><hr/>
                     <form action="" onSubmit={addHandler}>
-                        <input type="text" placeholder="Type" onChange={(e)=>{
+                        <input type="text" placeholder="Type" value={text} onChange={(e)=>{
                             setText(e.target.value) 
                         }}/>
-                        <input type="text" placeholder="Amount" onChange={(e)=>{
+                        <input type="text" placeholder="Amount" value={amount} onChange={(e)=>{
                             setAmount(e.target.value) 
                         }}/>
                         <button>Add</button>
